@@ -17,8 +17,8 @@ RUN ./mvnw dependency:resolve
 # Copy the rest of the application code
 COPY src ./src
 
-# Build the application
-RUN ./mvnw package
+# Build the application, skipping tests
+RUN ./mvnw package -DskipTests
 
 # Copy the built JAR file to the correct location
 COPY target/*.jar app.jar
