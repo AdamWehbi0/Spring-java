@@ -8,6 +8,9 @@ WORKDIR /app
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 
+# Grant execute permissions on the Maven wrapper
+RUN chmod +x mvnw
+
 # Install project dependencies
 RUN ./mvnw dependency:resolve
 
