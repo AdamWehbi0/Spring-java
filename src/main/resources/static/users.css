@@ -1,0 +1,263 @@
+/* Global styles */
+body {
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+/* Header styles */
+.header {
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: #0d1d31;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header_toggle {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.header_img {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header_img img {
+    width: 100%;
+}
+
+/* Navbar styles */
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: -30%;
+    width: 68px;
+    height: 100vh;
+    background-color: #0d1d31;
+    padding: 0.5rem 1rem 0 0;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav_logo, .nav_link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+}
+
+.nav_logo {
+    margin-bottom: 2rem;
+}
+
+.nav_logo-icon, .nav_icon {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.nav_logo-name {
+    color: white;
+    font-weight: 700;
+}
+
+.nav_link {
+    position: relative;
+    color: #AFA5D9;
+    margin-bottom: 1.5rem;
+    transition: 0.3s;
+}
+
+.nav_link:hover {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 2px;
+    height: 32px;
+    background-color: white;
+}
+
+.show {
+    left: 0;
+}
+
+.body-pd {
+    padding-left: calc(68px + 1rem);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: calc(3rem + 1rem) 0 0 0;
+        padding-left: calc(68px + 2rem);
+    }
+
+    .header {
+        height: calc(3rem + 1rem);
+        padding: 0 2rem 0 calc(68px + 2rem);
+    }
+
+    .header_img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .l-navbar {
+        left: 0;
+        padding: 1rem 1rem 0 0;
+    }
+
+    .show {
+        width: calc(68px + 156px);
+    }
+
+    .body-pd {
+        padding-left: calc(68px + 188px);
+    }
+}
+
+/* Form styles */
+.form {
+    margin-top: 50px;
+    height: 500px;
+    width: 700px;
+    padding: 20px;
+    background: #007bff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    text-align: center;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 4px black;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 500px;
+    height: 55px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: white;
+    box-shadow: 4px 4px black;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.input::placeholder {
+    color: lightgray;
+    opacity: 1;
+}
+
+.input:focus {
+    border-color: black;
+}
+
+.button-confirm {
+    margin: 40px auto 0 auto;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: white;
+    box-shadow: 4px 4px black;
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+}
+
+.button-confirm:active {
+    box-shadow: 0px 0px black;
+    transform: translate(3px, 3px);
+}
+
+/* Card container styles */
+.cen {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styles */
+.card {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    width: 240px;
+    height: 240px;
+    text-align: center;
+    background: #3a3f51;
+    box-shadow: 4px 4px white;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 5px 0;
+}

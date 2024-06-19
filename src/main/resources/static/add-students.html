@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Students</title>
+    <!-- Include Bootstrap CSS for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Boxicons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Include custom CSS for additional styling -->
+    <link rel="stylesheet" href="add-students.css">
+</head>
+<body id="body-pd">
+<!-- Header section -->
+<header class="header" id="header">
+    <div class="header_toggle">
+        <i class='bx bx-menu' id="header-toggle"></i>
+    </div>
+    <div class="header_img">
+        <img src="https://media.licdn.com/dms/image/D5603AQF-iOPI03jtaA/profile-displayphoto-shrink_200_200/0/1700760952275?e=2147483647&v=beta&t=eNhMWJog5tpN0g7jfqSsi2x55eUVA_I3sLTluRkcezo" alt="Profile Image">
+    </div>
+</header>
+
+<!-- Navbar section -->
+<div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+        <div>
+            <!-- Home page link -->
+            <a href="home-page.html" class="nav_logo">
+                <i class='bx bxs-home nav_logo-icon'></i>
+                <span class="nav_logo-name">Home Page</span>
+            </a>
+            <!-- Navigation links -->
+            <div class="nav_list">
+                <a href="users.html" class="nav_link active">
+                    <i class='bx bxs-user-detail nav_icon'></i>
+                    <span class="nav_name">Users</span>
+                </a>
+                <a href="add-students.html" class="nav_link">
+                    <i class='bx bxs-user-plus nav_icon'></i>
+                    <span class="nav_name">Add Students</span>
+                </a>
+                <a href="fetch-user-cards.html" class="nav_link">
+                    <i class='bx bxs-user-check nav_icon'></i>
+                    <span class="nav_name">Fetch All Students</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- Main content section for adding new students -->
+<div class="cen">
+    <form class="form" id="addStudentForm">
+        <div class="title">Add New Student</div>
+        <input type="text" placeholder="Name" name="name" class="input" required>
+        <input type="email" placeholder="Email" name="email" class="input" required>
+        <input type="date" name="dob" class="input" required>
+        <button type="submit" class="button-confirm">Add Student</button>
+    </form>
+</div>
+
+<!-- Include JavaScript file for form handling -->
+<script src="add-students.js"></script>
+</body>
+</html>

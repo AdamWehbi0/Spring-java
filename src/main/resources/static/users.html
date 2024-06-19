@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="users.css">
+</head>
+<body id="body-pd">
+
+<!-- Header Section -->
+<header class="header" id="header">
+    <div class="header_toggle">
+        <i class='bx bx-menu' id="header-toggle"></i>
+    </div>
+    <div class="header_img">
+        <img src="https://media.licdn.com/dms/image/D5603AQF-iOPI03jtaA/profile-displayphoto-shrink_200_200/0/1700760952275?e=2147483647&v=beta&t=eNhMWJog5tpN0g7jfqSsi2x55eUVA_I3sLTluRkcezo" alt="Profile Picture">
+    </div>
+</header>
+
+<!-- Navigation Section -->
+<div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+        <div>
+            <!-- Home page link -->
+            <a href="home-page.html" class="nav_logo">
+                <i class='bx bxs-home nav_logo-icon'></i>
+                <span class="nav_logo-name">Home Page</span>
+            </a>
+            <!-- Navigation links -->
+            <div class="nav_list">
+                <a href="users.html" class="nav_link active">
+                    <i class='bx bxs-user-detail nav_icon'></i>
+                    <span class="nav_name">Users</span>
+                </a>
+                <a href="add-students.html" class="nav_link">
+                    <i class='bx bxs-user-plus nav_icon'></i>
+                    <span class="nav_name">Add Students</span>
+                </a>
+                <a href="fetch-user-cards.html" class="nav_link">
+                    <i class='bx bxs-user-check nav_icon'></i>
+                    <span class="nav_name">Fetch All Students</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- Main Content Section -->
+<div class="cen">
+    <div id="card-container"></div>
+</div>
+
+<!-- JavaScript Section -->
+<script src="users.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    overflow: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    transform: rotate(-45deg);
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    top: var(--top-offset);
+    left: 0;
+    width: var(--star-tail-length);
+    height: var(--star-tail-height);
+    background: linear-gradient(45deg, currentColor, transparent);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 6px currentColor);
+    transform: translate3d(104em, 0, 0);
+    animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translate3d(-30em, 0, 0);
+    }
+}
+
+@keyframes tail-fade {
+    0%, 50% {
+        width: var(--star-tail-length);
+        opacity: 1;
+    }
+    70%, 80% {
+        width: 0;
+        opacity: 0.4;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.star::before, .star::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: calc(var(--star-width) / -2);
+    width: var(--star-width);
+    height: 100%;
+    background: linear-gradient(45deg, transparent, currentColor, transparent);
+    border-radius: inherit;
+    animation: blink 2s linear infinite;
+}
+
+.star::before {
+    transform: rotate(45deg);
+}
+
+.star::after {
+    transform: rotate(-45deg);
+}
+
+/* Generate stars with different properties */
+.stars .star:nth-child(1) {
+(1) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9s; --fall-delay: 0s; --tail-fade-duration: 9s; --top-offset: 0vh; }
+    .stars .star
+(2) { --star-color: #fff; --star-tail-length: 7em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 1s; --tail-fade-duration: 10s; --top-offset: 10vh; }
+    .stars .star
+(3) { --star-color: #fff; --star-tail-length: 5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 2s; --tail-fade-duration: 11s; --top-offset: 20vh; }
+    .stars .star
+(4) { --star-color: #fff; --star-tail-length: 6.5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 8s; --fall-delay: 3s; --tail-fade-duration: 8s; --top-offset: 30vh; }
+    .stars .star
+(5) { --star-color: #fff; --star-tail-length: 6.2em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9.5s; --fall-delay: 4s; --tail-fade-duration: 9.5s; --top-offset: 40vh; }
+    .stars .star
+(6) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 5s; --tail-fade-duration: 10s; --top-offset: 50vh; }
+    .stars .star
+(7) { --star-color: #fff; --star-tail-length: 5.8em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10.5s; --fall-delay: 6s; --tail-fade-duration: 10.5s; --top-offset: 60vh; }
+    .stars .star
+(8) { --star-color: #fff; --star-tail-length: 6.3em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 7s; --tail-fade-duration: 11s; --top-offset: 70vh; }
+    .stars .star
+(9) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9s; --fall-delay: 8s; --tail-fade-duration: 9s; --top-offset: 80vh; }
+    .stars .star
+(10) { --star-color: #fff; --star-tail-length: 7em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 9s; --tail-fade-duration: 10s; --top-offset: 90vh; }
+    .stars .star
+(11) { --star-color: #fff; --star-tail-length: 5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 10s; --tail-fade-duration: 11s; --top-offset: 100vh; }
+    .stars .star
+(12) { --star-color: #fff; --star-tail-length: 6.5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 8s; --fall-delay: 11s; --tail-fade-duration: 8s; --top-offset: 110vh; }
+    .stars .star
+(13) { --star-color: #fff; --star-tail-length: 6.2em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9.5s; --fall-delay: 12s; --tail-fade-duration: 9.5s; --top-offset: 120vh; }
+    .stars .star
+(14) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 13s; --tail-fade-duration: 10s; --top-offset: 130vh; }
+    .stars .star
+(15) { --star-color: #fff; --star-tail-length: 5.8em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10.5s; --fall-delay: 14s; --tail-fade-duration: 10.5s; --top-offset: 140vh; }
+    .stars .star
+(16) { --star-color: #fff; --star-tail-length: 6.3em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 15s; --tail-fade-duration: 11s; --top-offset: 150vh; }
+    .stars .star
+(17) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9s; --fall-delay: 16s; --tail-fade-duration: 9s; --top-offset: 160vh; }
+    .stars .star
+(18) { --star-color: #fff; --star-tail-length: 7em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 17s; --tail-fade-duration: 10s; --top-offset: 170vh; }
+    .stars .star
+(19) { --star-color: #fff; --star-tail-length: 5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 18s; --tail-fade-duration: 11s; --top-offset: 180vh; }
+    .stars .star
+(20) { --star-color: #fff; --star-tail-length: 6.5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 8s; --fall-delay: 19s; --tail-fade-duration: 8s; --top-offset: 190vh; }
+    .stars .star
+(21) { --star-color: #fff; --star-tail-length: 6.2em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9.5s; --fall-delay: 20s; --tail-fade-duration: 9.5s; --top-offset: 200vh; }
+    .stars .star
+(22) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 21s; --tail-fade-duration: 10s; --top-offset: 210vh; }
+    .stars .star
+(23) { --star-color: #fff; --star-tail-length: 5.8em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10.5s; --fall-delay: 22s; --tail-fade-duration: 10.5s; --top-offset: 220vh; }
+    .stars .star
+(24) { --star-color: #fff; --star-tail-length: 6.3em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 23s; --tail-fade-duration: 11s; --top-offset: 230vh; }
+    .stars .star
+(25) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9s; --fall-delay: 24s; --tail-fade-duration: 9s; --top-offset: 240vh; }
+    .stars .star
+(26) { --star-color: #fff; --star-tail-length: 7em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 25s; --tail-fade-duration: 10s; --top-offset: 250vh; }
+    .stars .star
+(27) { --star-color: #fff; --star-tail-length: 5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 26s; --tail-fade-duration: 11s; --top-offset: 260vh; }
+    .stars .star
+(28) { --star-color: #fff; --star-tail-length: 6.5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 8s; --fall-delay: 27s; --tail-fade-duration: 8s; --top-offset: 270vh; }
+    .stars .star
+(29) { --star-color: #fff; --star-tail-length: 6.2em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9.5s; --fall-delay: 28s; --tail-fade-duration: 9.5s; --top-offset: 280vh; }
+    .stars .star
+(30) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 29s; --tail-fade-duration: 10s; --top-offset: 290vh; }
+    .stars .star
+(31) { --star-color: #fff; --star-tail-length: 5.8em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10.5s; --fall-delay: 30s; --tail-fade-duration: 10.5s; --top-offset: 300vh; }
+    .stars .star
+(32) { --star-color: #fff; --star-tail-length: 6.3em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 31s; --tail-fade-duration: 11s; --top-offset: 310vh; }
+    .stars .star
+(33) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9s; --fall-delay: 32s; --tail-fade-duration: 9s; --top-offset: 320vh; }
+    .stars .star
+(34) { --star-color: #fff; --star-tail-length: 7em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 33s; --tail-fade-duration: 10s; --top-offset: 330vh; }
+    .stars .star
+(35) { --star-color: #fff; --star-tail-length: 5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 34s; --tail-fade-duration: 11s; --top-offset: 340vh; }
+    .stars .star
+(36) { --star-color: #fff; --star-tail-length: 6.5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 8s; --fall-delay: 35s; --tail-fade-duration: 8s; --top-offset: 350vh; }
+    .stars .star
+(37) { --star-color: #fff; --star-tail-length: 6.2em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9.5s; --fall-delay: 36s; --tail-fade-duration: 9.5s; --top-offset: 360vh; }
+    .stars .star
+(38) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 37s; --tail-fade-duration: 10s; --top-offset: 370vh; }
+    .stars .star
+(39) { --star-color: #fff; --star-tail-length: 5.8em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10.5s; --fall-delay: 38s; --tail-fade-duration: 10.5s; --top-offset: 380vh; }
+    .stars .star
+(40) { --star-color: #fff; --star-tail-length: 6.3em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 39s; --tail-fade-duration: 11s; --top-offset: 390vh; }
+    .stars .star
+(41) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9s; --fall-delay: 40s; --tail-fade-duration: 9s; --top-offset: 400vh; }
+    .stars .star
+(42) { --star-color: #fff; --star-tail-length: 7em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 41s; --tail-fade-duration: 10s; --top-offset: 410vh; }
+    .stars .star
+(43) { --star-color: #fff; --star-tail-length: 5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 42s; --tail-fade-duration: 11s; --top-offset: 420vh; }
+    .stars .star
+(44) { --star-color: #fff; --star-tail-length: 6.5em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 8s; --fall-delay: 43s; --tail-fade-duration: 8s; --top-offset: 430vh; }
+    .stars .star
+(45) { --star-color: #fff; --star-tail-length: 6.2em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9.5s; --fall-delay: 44s; --tail-fade-duration: 9.5s; --top-offset: 440vh; }
+    .stars .star
+(46) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 45s; --tail-fade-duration: 10s; --top-offset: 450vh; }
+    .stars .star
+(47) { --star-color: #fff; --star-tail-length: 5.8em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10.5s; --fall-delay: 46s; --tail-fade-duration: 10.5s; --top-offset: 460vh; }
+    .stars .star
+(48) { --star-color: #fff; --star-tail-length: 6.3em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 11s; --fall-delay: 47s; --tail-fade-duration: 11s; --top-offset: 470vh; }
+    .stars .star
+(49) { --star-color: #fff; --star-tail-length: 6em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 9s; --fall-delay: 48s; --tail-fade-duration: 9s; --top-offset: 480vh; }
+    .stars .star
+(50) { --star-color: #fff; --star-tail-length: 7em; --star-tail-height: 2px; --star-width: 1em; --fall-duration: 10s; --fall-delay: 49s; --tail-fade-duration: 10s; --top-offset: 490vh; }
+}
+
+
+#welcome-title {
+    margin-bottom: 80px;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+button {
+    margin: 15px;
+    position: relative;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    color: #fff;
+    width: 12em;
+    height: 3.5em;
+    line-height: 3.5em;
+    text-align: center;
+    background: linear-gradient(90deg, #0f3e5f, #2e4a9a, #20242b, #000000);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+button:hover {
+    animation: ani 8s linear infinite;
+}
+
+@keyframes ani {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #0f3e5f, #2e4a9a, #20242b, #000000);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+button:hover::before {
+    filter: blur(15px);
+}
+
+button:active {
+    background: linear-gradient(32deg, #0f3e5f, #2e4a9a, #20242b, #000000);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
