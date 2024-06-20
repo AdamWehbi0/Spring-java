@@ -11,16 +11,12 @@ COPY mvnw pom.xml ./
 # Grant execute permissions on the Maven wrapper
 RUN chmod +x mvnw
 
-# Install project dependencies
-RUN ./mvnw dependency:resolve
-
-# Copy the rest of the application code
+# Install project dependencies and build the application, skipping tests
 COPY src ./src
-
-# Build the application, skipping tests
-RUN ./mvnw package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 # Copy the built JAR file to the correct location
+RUN ls target # Add this line to check the contents of the target directory
 COPY target/*.jar app.jar
 
 # Make port 8080 available to the world outside this container
