@@ -22,5 +22,8 @@ COPY target/*.jar app.jar
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
 
+ENV SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/student
+ENV SPRING_DATASOURCE_USERNAME=postgres
+ENV SPRING_DATASOURCE_PASSWORD=Adam1218
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
